@@ -14,7 +14,7 @@ class User < ApplicationRecord
   def avatar_image_content_type
     return unless avatar_image.attached?
 
-    unless avatar_image.content_type.in?([ "image/png", "image/jpg", "image/jpeg" ])
+    unless avatar_image.content_type.in?([ "image/png", "image/jpg", "image/jpeg", "image/avif" ])
       errors.add(:avatar_image, I18n.t("messages.errors.image.content_type"))
     end
   end

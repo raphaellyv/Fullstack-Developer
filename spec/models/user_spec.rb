@@ -65,7 +65,14 @@ RSpec.describe User, type: :model do
   describe 'default role' do
     it 'is no_admin by default' do
       user = User.new(full_name: 'João Silva', email: 'jsilva@email.com')
-      
+      user.avatar_image.attach(
+        io: File.open(Rails.root.join('spec', 'fixtures', 'files', 'avatar_image.jpg')),
+        filename: 'avatar_image.jpg',
+        content_type: 'image/jpg'
+      )
+
+      user.save!
+
       expect(user.role).to eq('no_admin')
     end
   end
