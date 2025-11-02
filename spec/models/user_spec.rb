@@ -35,13 +35,38 @@ RSpec.describe User, type: :model do
       expect(user4.errors[:email]).to include("is invalid")
       expect(user5.errors[:email]).to include("is invalid")
     end
+
+    context '#avatar_image_content_type' do
+      it 'is valid if avatar_image is png' do
+        subject.avatar_image.content_type = 'image/png'
+
+        expect(subject).to be_valid
+      end
+
+      it 'is valid if avatar_image is jpeg' do
+        subject.avatar_image.content_type = 'image/jpeg'
+        expect(subject).to be_valid
+      end
+
+      it 'is valid if avatar_image is jpg' do
+        subject.avatar_image.content_type = 'image/jpg'
+        expect(subject).to be_valid
+      end
+
+      it 'is invalid if avatar_image is gif' do
+        subject.avatar_image.content_type = 'image/gif'
+
+        expect(subject).not_to be_valid
+        expect(subject.errors[:avatar_image]).to include('must be a JPG, JPEG or PNG')
+      end
+    end
   end
 
-  describe 'default' do
-    it 'creates user as no_admin by default' do
-      user = User.create!(full_name: 'João Silva', email: 'jsilva@email.com')
-
-      expect(user.role).to eq("no_admin")
+  describe 'default role' do
+    it 'is no_admin by default' do
+      user = User.new(full_name: 'João Silva', email: 'jsilva@email.com')
+      
+      expect(user.role).to eq('no_admin')
     end
   end
 end

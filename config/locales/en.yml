@@ -28,4 +28,9 @@
 #       enabled: "ON"
 
 en:
-  welcome_message: "Welcome, folks!"
+  messages:
+    errors:
+      image:
+        content_type: "must be a JPG, JPEG or PNG"
+    welcome: "Welcome, folks!"
+

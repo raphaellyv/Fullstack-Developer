@@ -18,6 +18,52 @@
           null
         ]
       },
+      "/home/raphaelly/Fullstack-Developer/app/models/user.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          14,
+          null,
+          12,
+          9,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/raphaelly/Fullstack-Developer/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/raphaelly/Fullstack-Developer/spec/system/homepage_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/home/raphaelly/Fullstack-Developer/config/routes.rb": {
         "lines": [
           1,
@@ -53,6 +99,6 @@
         ]
       }
     },
-    "timestamp": 1762063470
+    "timestamp": 1762110178
   }
 }
