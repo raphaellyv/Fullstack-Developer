@@ -5,6 +5,6 @@ describe 'Homepage', type: :system do
     visit(root_path)
 
     expect(page).to have_content('Users Management App')
-    expect(page).to have_content('Welcome, folks!')
+    expect(page).to have_content('Welcome')
   end
 end

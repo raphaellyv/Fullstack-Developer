@@ -1,0 +1,7 @@
+<div class="position-absolute top-50 start-50 translate-middle text-center">
+  <% if current_user %>
+    <h1><%= t("messages.user_greeting", user: current_user.full_name.split.first) %></h1>
+  <% else %>
+    <h1><%= t("messages.welcome") %></h1>
+  <% end %>
+</div>

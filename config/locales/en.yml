@@ -28,9 +28,15 @@
 #       enabled: "ON"
 
 en:
+  devise:
+    links:
+      sign_in: "Sign In"
+      sign_out: "Sign Out"
+      sign_up: "Sign Up"
   messages:
     errors:
       image:
         content_type: "must be a JPG, JPEG or PNG"
-    welcome: "Welcome, folks!"
+    welcome: "Welcome"
+    user_greeting: "Hello, %{user}"
 

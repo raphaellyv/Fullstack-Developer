@@ -3,6 +3,7 @@ FactoryBot.define do
     full_name { "João Silva" }
     email { "username@domain.com" }
     role { :no_admin }
+    password { "123456" }
 
     after(:build) do |user|
       user.avatar_image.attach(

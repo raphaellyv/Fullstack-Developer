@@ -21,22 +21,25 @@
       "/home/raphaelly/Fullstack-Developer/app/models/user.rb": {
         "lines": [
           1,
-          1,
           null,
-          1,
-          1,
-          1,
           null,
           1,
           null,
           1,
           null,
           1,
+          1,
           null,
           1,
-          16,
           null,
-          14,
+          1,
+          null,
+          1,
+          null,
+          1,
+          18,
+          null,
+          18,
           1,
           null,
           null,
@@ -75,15 +78,15 @@
           1,
           1,
           null,
-          0,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -91,6 +94,7 @@
       "/home/raphaelly/Fullstack-Developer/config/routes.rb": {
         "lines": [
           1,
+          1,
           null,
           null,
           null,
@@ -106,7 +110,7 @@
           null
         ]
       },
-      "/home/raphaelly/Fullstack-Developer/app/controllers/pages_controller.rb": {
+      "/home/raphaelly/Fullstack-Developer/app/controllers/home_controller.rb": {
         "lines": [
           1,
           1,
@@ -123,6 +127,6 @@
         ]
       }
     },
-    "timestamp": 1762113262
+    "timestamp": 1762120469
   }
 }
