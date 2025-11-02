@@ -37,6 +37,6 @@ en:
     errors:
       image:
         content_type: "must be a JPG, JPEG or PNG"
-    welcome: "Welcome"
+    welcome: "Welcome, folks!"
     user_greeting: "Hello, %{user}"
 
