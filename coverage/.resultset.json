@@ -1,0 +1,58 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/raphaelly/Fullstack-Developer/spec/support/factory_bot.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/raphaelly/Fullstack-Developer/spec/support/shoulda_matchers.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/raphaelly/Fullstack-Developer/config/routes.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/home/raphaelly/Fullstack-Developer/app/controllers/pages_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/raphaelly/Fullstack-Developer/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null
+        ]
+      }
+    },
+    "timestamp": 1762063470
+  }
+}
