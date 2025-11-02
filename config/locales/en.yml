@@ -38,5 +38,5 @@ en:
       image:
         content_type: "must be a JPG, JPEG or PNG"
     welcome: "Welcome, folks!"
-    user_greeting: "Hello, %{user}"
+    user_greeting: "Hello, %{first_name}"
 
