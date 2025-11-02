@@ -30,10 +30,14 @@
 en:
   app_name: Users Management App
   devise:
-    links:
-      sign_in: "Sign In"
-      sign_out: "Sign Out"
-      sign_up: "Sign Up"
+    sign_in:
+      link: "Sign In"
+      submit: "Sign in"
+      title: "Sign In"
+    sign_out: 
+      link: "Sign Out"
+    sign_up:
+      link: "Sign Up"
   messages:
     errors:
       image:

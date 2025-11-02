@@ -10,7 +10,7 @@ describe 'User Sign In', type: :system do
     within 'form' do
       fill_in 'Email', with: user.email
       fill_in 'Password', with: user.password
-      click_on 'Log in'
+      click_on('Sign in')
     end
 
     expect(page).not_to have_link('Sign In')
