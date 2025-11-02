@@ -36,4 +36,12 @@ RSpec.describe User, type: :model do
       expect(user5.errors[:email]).to include("is invalid")
     end
   end
+
+  describe 'default' do
+    it 'creates user as no_admin by default' do
+      user = User.create!(full_name: 'João Silva', email: 'jsilva@email.com')
+
+      expect(user.role).to eq("no_admin")
+    end
+  end
 end
