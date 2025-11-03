@@ -18,7 +18,7 @@ describe 'Edit user', type: :system do
     expect(page).to have_content('Current password (we need your current password to confirm your changes)')
   end
 
-  xcontext 'fails' do
+  context 'fails' do
     it 'shows error message' do
       user = create(:user)
       login_as(user)
@@ -26,13 +26,11 @@ describe 'Edit user', type: :system do
       visit(profile_path)
       click_on('Edit')
 
+      fill_in 'Current password', with: 'password'
       click_on('Update')
 
-      expect(page).to have_content('4 errors prohibited this user from being saved:')
-      expect(page).to have_content("Email can't be blank")
-      expect(page).to have_content("Password can't be blank")
-      expect(page).to have_content("Full name can't be blank")
-      expect(page).to have_content("Avatar image can't be blank")
+      expect(page).to have_content('1 error prohibited this user from being saved:')
+      expect(page).to have_content("Current password is invalid")
     end
   end
 end

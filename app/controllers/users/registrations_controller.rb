@@ -50,10 +50,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
     devise_parameter_sanitizer.permit(:account_update, keys: [ :full_name, :avatar_image ])
   end
 
-  def after_sign_in_path_for(resource)
-    profile_path
-  end
-
   def after_update_path_for(resource)
     profile_path
   end
