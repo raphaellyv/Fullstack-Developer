@@ -80,6 +80,24 @@
           null
         ]
       },
+      "/home/raphaelly/Fullstack-Developer/spec/system/user/cancel_account_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null
+        ]
+      },
       "/home/raphaelly/Fullstack-Developer/spec/system/user/edit_spec.rb": {
         "lines": [
           1,
@@ -428,6 +446,6 @@
         ]
       }
     },
-    "timestamp": 1762193282
+    "timestamp": 1762203703
   }
 }

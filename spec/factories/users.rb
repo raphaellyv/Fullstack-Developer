@@ -1,7 +1,9 @@
+require 'faker'
+
 FactoryBot.define do
   factory :user do
-    full_name { "João Silva" }
-    email { "username@domain.com" }
+    full_name { Faker::Name.name }
+    email { "#{ Faker::Alphanumeric.alpha(number: 10) }@domain.com" }
     role { :no_admin }
     password { "123456" }
 

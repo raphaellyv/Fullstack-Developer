@@ -13,7 +13,7 @@
       <img src="./assets/0.13.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2025-11-03T15:08:02-03:00">2025-11-03T15:08:02-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2025-11-03T18:01:43-03:00">2025-11-03T18:01:43-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -22,14 +22,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  100.0%
+  98.57%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.52
+         1.49
        </span>
     </span> hits/line
     )
@@ -38,15 +38,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>14</b> files in total.
+    <b>15</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>204</b> relevant lines,
-    <span class="green"><b>204</b> lines covered</span> and
-    <span class="red"><b>0</b> lines missed. </span>
+    <b>210</b> relevant lines,
+    <span class="green"><b>207</b> lines covered</span> and
+    <span class="red"><b>3</b> lines missed. </span>
     (<span class="green">
-  100.0%
+  98.57%
 </span>
 )
   </div>
@@ -176,6 +176,17 @@
             <td class="cell--number">8</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#e0189de72b9a0cc4a996987e3878db759627fd6a" class="src_link" title="spec/system/user/cancel_account_spec.rb">spec/system/user/cancel_account_spec.rb</a></td>
+            <td class="red strong cell--number t-file__coverage">50.00 %</td>
+            <td class="cell--number">15</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">3</td>
+            <td class="cell--number">3</td>
+            <td class="cell--number">0.50</td>
             
           </tr>
         
@@ -2238,6 +2249,193 @@
 </div>
 
       
+        <div class="source_table" id="e0189de72b9a0cc4a996987e3878db759627fd6a">
+  <div class="header">
+    <h3>spec/system/user/cancel_account_spec.rb</h3>
+    <h4>
+      <span class="red">
+  50.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>6</b> relevant lines.
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>3</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">require &quot;rails_helper&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">describe &#39;Cancel users account&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="4">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  xit &#39;is accessed through edit user page&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="5">
+            
+
+            
+
+            <code class="ruby">    user1 = create(:user)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="6">
+            
+
+            
+
+            <code class="ruby">    user2 = create(:user)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
+            
+
+            
+
+            <code class="ruby">    # login_as(user1)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+
+            
+
+            <code class="ruby">    # visit(root_path)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+
+            
+
+            <code class="ruby">    # click_on(&#39;Edit&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="12">
+            
+
+            
+
+            <code class="ruby">    # expect(page).to have_button(&#39;Cancel my account&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="13">
+            
+
+            
+
+            <code class="ruby">    expect(user1.full_name).to eq(&#39;Back&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="15">
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="c6dcdbf568aef69e8fad80b579b4deb429317040">
   <div class="header">
     <h3>spec/system/user/edit_spec.rb</h3>
@@ -2762,7 +2960,7 @@
 
             
 
-            <code class="ruby">      </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3002,7 +3200,7 @@
 
             
 
-            <code class="ruby">      </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4293,7 +4491,7 @@
 
             
 
-            <code class="ruby">describe &#39;User Sign-up&#39;, type: :system do</code>
+            <code class="ruby">describe &#39;User sign-up&#39;, type: :system do</code>
           </li>
         </div>
       
