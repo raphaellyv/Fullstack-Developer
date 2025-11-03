@@ -1,2 +1,15 @@
-<p><%= current_user.full_name%></p>
-<p><%= current_user.email%></p>
+<div class="position-relative">
+  <div class="card my-3 position-absolute top-0 start-50 translate-middle-x" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <%= image_tag current_user.avatar_image, class: "img-fluid rounded-start", alt: "avatar" %>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title"><%= current_user.full_name %></h5>
+          <p class="card-text"><%= current_user.email %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
