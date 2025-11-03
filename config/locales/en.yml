@@ -39,6 +39,8 @@ en:
       link: "Sign Out"
     sign_up:
       link: "Sign Up"
+      submit: "Sign up"
+      title: "Sign Up"
   messages:
     errors:
       image:

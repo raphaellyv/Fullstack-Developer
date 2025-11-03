@@ -37,11 +37,15 @@
           1,
           null,
           1,
-          21,
+          22,
           null,
           21,
           1,
           null,
+          null,
+          null,
+          1,
+          22,
           null,
           null
         ]
@@ -160,6 +164,52 @@
           null
         ]
       },
+      "/home/raphaelly/Fullstack-Developer/spec/system/user/sign_up_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/home/raphaelly/Fullstack-Developer/config/routes.rb": {
         "lines": [
           1,
@@ -209,6 +259,6 @@
         ]
       }
     },
-    "timestamp": 1762138245
+    "timestamp": 1762146476
   }
 }

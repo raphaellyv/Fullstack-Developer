@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_one_attached :avatar_image
 
   validates :full_name, :email, :role, :avatar_image, presence: true
-  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
+  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }, if: :email_present?
 
   validate :avatar_image_content_type
 
@@ -20,5 +20,9 @@ class User < ApplicationRecord
     unless avatar_image.content_type.in?([ "image/png", "image/jpg", "image/jpeg", "image/avif" ])
       errors.add(:avatar_image, I18n.t("messages.errors.image.content_type"))
     end
+  end
+
+  def email_present?
+    email.present?
   end
 end
