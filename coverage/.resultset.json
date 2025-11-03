@@ -35,15 +35,11 @@
           1,
           null,
           1,
-          2,
-          null,
           null,
           1,
+          21,
           null,
-          1,
-          20,
-          null,
-          20,
+          21,
           1,
           null,
           null,
@@ -75,7 +71,48 @@
           null
         ]
       },
-      "/home/raphaelly/Fullstack-Developer/spec/system/user/user_sign_in_spec.rb": {
+      "/home/raphaelly/Fullstack-Developer/spec/system/user/profile_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/raphaelly/Fullstack-Developer/spec/system/user/sign_in_spec.rb": {
         "lines": [
           1,
           null,
@@ -136,13 +173,20 @@
           null,
           null,
           1,
+          1,
           null
         ]
       },
-      "/home/raphaelly/Fullstack-Developer/app/controllers/home_controller.rb": {
+      "/home/raphaelly/Fullstack-Developer/app/controllers/pages_controller.rb": {
         "lines": [
           1,
           1,
+          null,
+          null,
+          1,
+          2,
+          1,
+          null,
           null,
           null
         ]
@@ -156,6 +200,6 @@
         ]
       }
     },
-    "timestamp": 1762128857
+    "timestamp": 1762134900
   }
 }

@@ -12,10 +12,6 @@ class User < ApplicationRecord
 
   enum :role, { admin: "admin", no_admin: "no_admin" }, default: :no_admin, validate: true
 
-  def first_name
-    full_name.split.first
-  end
-
   private
 
   def avatar_image_content_type

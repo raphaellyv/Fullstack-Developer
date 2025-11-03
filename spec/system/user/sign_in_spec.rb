@@ -3,7 +3,7 @@ require "rails_helper"
 describe 'User Sign In', type: :system do
   context 'success' do
     it 'shows user first name and sign out option' do
-      user = create(:user, full_name: 'João da Silva')
+      user = create(:user)
 
       visit(root_path)
       click_on('Sign In')
@@ -15,8 +15,8 @@ describe 'User Sign In', type: :system do
       end
 
       expect(page).not_to have_link('Sign In')
+      expect(page).to have_link('Profile')
       expect(page).to have_button('Sign Out')
-      expect(page).to have_content("Hello, João")
       expect(page).to have_content("Signed in successfully.")
     end
   end
@@ -33,8 +33,8 @@ describe 'User Sign In', type: :system do
       end
 
       expect(page).to have_link('Sign In')
+      expect(page).not_to have_link('Profile')
       expect(page).not_to have_button('Sign Out')
-      expect(page).not_to have_content("Hello, João")
       expect(page).to have_content("Invalid Email or password.")
     end
   end

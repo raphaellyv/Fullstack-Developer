@@ -34,6 +34,7 @@ en:
       link: "Sign In"
       submit: "Sign in"
       title: "Sign In"
+      alert: "Please sign in to proceed."
     sign_out: 
       link: "Sign Out"
     sign_up:
@@ -43,5 +44,7 @@ en:
       image:
         content_type: "must be a JPG, JPEG or PNG"
     welcome: "Welcome, folks!"
-    user_greeting: "Hello, %{first_name}"
+  user:
+    profile:
+      title: "Profile"
 

@@ -87,12 +87,4 @@ RSpec.describe User, type: :model do
       expect(user.role).to eq('no_admin')
     end
   end
-
-  describe '#first_name' do
-    it 'returns the first name' do
-      user = create(:user, full_name: 'Antonio Santos')
-
-      expect(user.first_name).to eq 'Antonio'
-    end
-  end
 end
