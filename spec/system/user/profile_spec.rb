@@ -4,15 +4,9 @@ describe 'User profile', type: :system do
   context 'after login' do
     it 'shows user information' do
       user = create(:user, full_name: 'João da Silva', email: 'jsilva@email.com')
+      login_as(user)
 
       visit(root_path)
-      click_on('Sign In')
-
-      within 'form' do
-        fill_in 'Email', with: user.email
-        fill_in 'Password', with: user.password
-        click_on('Sign in')
-      end
 
       within 'nav' do
         click_on('Profile')
