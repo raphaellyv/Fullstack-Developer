@@ -7,4 +7,8 @@ class PagesController < ApplicationController
       redirect_to new_user_session_path, alert: I18n.t("devise.sign_in.alert")
     end
   end
+
+  def dashboard
+    @users = User.all.order(:full_name)
+  end
 end

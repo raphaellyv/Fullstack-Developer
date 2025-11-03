@@ -16,6 +16,7 @@ describe 'User sign-in', type: :system do
 
       expect(page).not_to have_link('Sign In')
       expect(page).to have_link('Profile')
+      expect(page).not_to have_link('Dashboard')
       expect(page).to have_button('Sign Out')
       expect(page).to have_content("Signed in successfully.")
       expect(page).to have_content(user.full_name)

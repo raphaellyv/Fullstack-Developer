@@ -58,4 +58,7 @@ en:
       button: "Edit"
     profile:
       title: "Profile"
+    admin:
+      dashboard:
+        link: "Dashboard"
 

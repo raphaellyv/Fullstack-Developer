@@ -10,6 +10,10 @@
           <li class="nav-item">
             <%= link_to t("user.profile.title"), profile_path, class: "nav-link #{ 'active' if current_page?(profile_path) }" %>
           </li>
+
+          <% if current_user.admin? %>
+            <%= link_to t("user.admin.dashboard.link"), dashboard_path, class: "nav-link #{ 'active' if current_page?(dashboard_path) }" %>
+          <% end %>
         </ul>
         <%= button_to t("devise.sign_out.link"), destroy_user_session_path, method: :delete, class: "btn btn-outline-secondary me-2" %>
       <% else %>
