@@ -21,6 +21,26 @@ describe 'User Sign In', type: :system do
       expect(page).to have_content(user.full_name)
       expect(page).to have_content(user.email)
     end
+
+    it 'allows the user to sign out' do
+      user = create(:user)
+
+      visit(root_path)
+      click_on('Sign In')
+
+      within 'form' do
+        fill_in 'Email', with: user.email
+        fill_in 'Password', with: user.password
+        click_on('Sign in')
+      end
+      click_on('Sign Out')
+      
+      expect(page).to have_link('Sign In')
+      expect(page).not_to have_link('Profile')
+      expect(page).not_to have_button('Sign Out')
+      expect(page).to have_content("Signed out successfully.")
+      expect(page).to have_content('Welcome, folks!')
+    end
   end
 
   context 'fails' do
