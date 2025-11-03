@@ -33,4 +33,46 @@ describe 'Edit user', type: :system do
       expect(page).to have_content("Current password is invalid")
     end
   end
+
+  context 'success' do
+    it 'updates the user adding new avatar image' do
+      user = create(:user)
+      login_as(user)
+
+      visit(profile_path)
+      click_on('Edit')
+
+      fill_in 'Full name', with: 'Marta Souza'
+      fill_in 'Email', with: 'marta@email.com'
+      fill_in 'Password', with: '12345678'
+      fill_in 'Password confirmation', with: '12345678'
+      fill_in 'Current password', with: user.password
+      page.attach_file('Avatar image', Rails.root.join('spec', 'fixtures', 'files', 'avatar_image.jpg'))
+      click_on('Update')
+
+      expect(page).to have_content('Your account has been updated successfully.')
+      expect(page).to have_content('Marta Souza')
+      expect(page).to have_content('marta@email.com')
+    end
+
+    it 'updates the user leaving avatar image blank' do
+      user = create(:user)
+      login_as(user)
+
+      visit(profile_path)
+      click_on('Edit')
+
+
+      fill_in 'Full name', with: 'Marta Souza'
+      fill_in 'Email', with: 'marta@email.com'
+      fill_in 'Password', with: '12345678'
+      fill_in 'Password confirmation', with: '12345678'
+      fill_in 'Current password', with: user.password
+      click_on('Update')
+
+      expect(page).to have_content('Your account has been updated successfully.')
+      expect(page).to have_content('Marta Souza')
+      expect(page).to have_content('marta@email.com')
+    end
+  end
 end
