@@ -16,6 +16,7 @@ describe 'Edit user', type: :system do
     expect(page).to have_content('6 characters minimum')
     expect(page).to have_content('Password confirmation')
     expect(page).to have_content('Current password (we need your current password to confirm your changes)')
+    expect(page).to have_link('Back')
   end
 
   context 'fails' do

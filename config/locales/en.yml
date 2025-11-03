@@ -36,6 +36,7 @@ en:
       new_password:
         info: "(leave blank if you don't want to change it)"
         min_characters: "characters minimum"
+      back_link: "Back"
     sign_in:
       alert: "Please sign in to proceed."
       link: "Sign In"
