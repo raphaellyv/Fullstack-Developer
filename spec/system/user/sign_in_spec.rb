@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe 'User Sign In', type: :system do
+describe 'User sign-in', type: :system do
   context 'success' do
     it 'shows user first name and sign out option' do
       user = create(:user)

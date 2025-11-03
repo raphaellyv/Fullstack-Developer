@@ -30,11 +30,17 @@
 en:
   app_name: Users Management App
   devise:
+    edit:
+      avatar_image:
+          info: "(leave blank if you don't want to change it)"
+      new_password:
+        info: "(leave blank if you don't want to change it)"
+        min_characters: "characters minimum"
     sign_in:
+      alert: "Please sign in to proceed."
       link: "Sign In"
       submit: "Sign in"
       title: "Sign In"
-      alert: "Please sign in to proceed."
     sign_out: 
       link: "Sign Out"
     sign_up:
@@ -47,6 +53,8 @@ en:
         content_type: "must be a JPG, JPEG or PNG"
     welcome: "Welcome, folks!"
   user:
+    edit:
+      button: "Edit"
     profile:
       title: "Profile"
 

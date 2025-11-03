@@ -14,6 +14,7 @@ describe 'User profile', type: :system do
 
       expect(page).to have_content('João da Silva')
       expect(page).to have_content('jsilva@email.com')
+      expect(page).to have_link('Edit')
     end
   end
 

@@ -8,6 +8,7 @@
         <div class="card-body">
           <h5 class="card-title"><%= current_user.full_name %></h5>
           <p class="card-text"><%= current_user.email %></p>
+          <%= link_to t("user.edit.button"), edit_user_registration_path, class: "btn btn-primary" %>
         </div>
       </div>
     </div>

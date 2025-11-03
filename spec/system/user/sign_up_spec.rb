@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe 'User Sign Up', type: :system do
+describe 'User Sign-up', type: :system do
   context 'success' do
     it 'shows user first name and sign out option' do
       visit(root_path)
