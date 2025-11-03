@@ -13,7 +13,7 @@
       <img src="./assets/0.13.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2025-11-03T03:26:03-03:00">2025-11-03T03:26:03-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2025-11-03T12:57:51-03:00">2025-11-03T12:57:51-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -566,7 +566,7 @@
 
             
 
-            <code class="ruby">  before_action :configure_sign_up_params, only: [:create]</code>
+            <code class="ruby">  before_action :configure_sign_up_params, only: [ :create ]</code>
           </li>
         </div>
       
@@ -984,7 +984,7 @@
 
             
 
-            <code class="ruby">    devise_parameter_sanitizer.permit(:sign_up, keys: [:full_name, :avatar_image])</code>
+            <code class="ruby">    devise_parameter_sanitizer.permit(:sign_up, keys: [ :full_name, :avatar_image ])</code>
           </li>
         </div>
       
@@ -1613,7 +1613,7 @@
 
             
 
-            <code class="ruby">  devise_for :users, :controllers =&gt; { registrations: &#39;users/registrations&#39; }</code>
+            <code class="ruby">  devise_for :users, controllers: { registrations: &quot;users/registrations&quot; }</code>
           </li>
         </div>
       

@@ -5,12 +5,12 @@
     <div class="d-grid gap-3 mb-3">
       <div class="field">
         <%= f.label :email, class: "form-lable" %>
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", required: true %>
       </div>
 
       <div class="field">
         <%= f.label :password, class: "form-lable" %>
-        <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
+        <%= f.password_field :password, autocomplete: "current-password", class: "form-control", required: true %>
       </div>
 
       <% if devise_mapping.rememberable? %>
