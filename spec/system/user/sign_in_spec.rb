@@ -18,6 +18,8 @@ describe 'User Sign In', type: :system do
       expect(page).to have_link('Profile')
       expect(page).to have_button('Sign Out')
       expect(page).to have_content("Signed in successfully.")
+      expect(page).to have_content(user.full_name)
+      expect(page).to have_content(user.email)
     end
   end
 
