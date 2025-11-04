@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   root "pages#home"
   get "profile" => "pages#profile", as: :profile
   # get "dashboard" => "pages#dashboard", as: :dashboard
-  get "admins/dashboard" => "admins#dashboard", as: :admins_dashboard
+  get "admin/dashboard" => "admin#dashboard", as: :admin_dashboard
 
   resources :admin, only: [ :update ]
 end

@@ -5,7 +5,7 @@ describe 'Admin dashboard', type: :system do
     admin = create(:user, role: :admin)
     user = create(:user)
 
-    visit(admins_dashboard_path)
+    visit(admin_dashboard_path)
 
     expect(page).to have_link('Sign In')
     expect(page).not_to have_link('Dashboard')
@@ -18,7 +18,7 @@ describe 'Admin dashboard', type: :system do
     user = create(:user)
     login_as(user)
 
-    visit(admins_dashboard_path)
+    visit(admin_dashboard_path)
 
     expect(page).to have_link('Profile')
     expect(page).not_to have_link('Dashboard')
