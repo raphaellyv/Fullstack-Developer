@@ -42,15 +42,15 @@
           1,
           null,
           1,
-          47,
+          48,
           null,
-          46,
+          47,
           1,
           null,
           null,
           null,
           1,
-          47,
+          48,
           null,
           null
         ]
@@ -103,7 +103,6 @@
           1,
           null,
           1,
-          null,
           1,
           1,
           1,
@@ -119,6 +118,26 @@
           1,
           null,
           null,
+          null
+        ]
+      },
+      "/home/raphaelly/Fullstack-Developer/spec/system/admin/edit_user_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
           null
         ]
       },
@@ -494,6 +513,8 @@
           1,
           null,
           1,
+          null,
+          1,
           null
         ]
       },
@@ -504,16 +525,16 @@
           1,
           null,
           1,
-          2,
-          2,
-          2,
-          2,
-          null,
-          null,
-          1,
-          null,
-          1,
           3,
+          3,
+          3,
+          3,
+          null,
+          null,
+          1,
+          null,
+          1,
+          4,
           1,
           null,
           null
@@ -617,6 +638,6 @@
         ]
       }
     },
-    "timestamp": 1762282100
+    "timestamp": 1762290139
   }
 }

@@ -57,7 +57,10 @@ en:
     admin:
       dashboard:
         link: "Dashboard"
+        create_new_user: "Create new user"
     edit:
+      title: "Edit User"
       button: "Edit"
+      submit_button: "Update"
     profile:
       title: "Profile"

@@ -14,7 +14,7 @@
             <p class="fs-6"><%= user.full_name %></p>
             <p class="text-body-secondary fs-6"><%= user.email %></p>
           </td>
-          <td><%= link_to t("user.edit.button"), root_path, class: "btn btn-primary" %></td>
+          <td><%= render "edit_user_modal", user: user %></td>
         </tr>
       <% end %>
     </tbody>

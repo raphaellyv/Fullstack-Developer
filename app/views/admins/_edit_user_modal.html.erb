@@ -1,0 +1,38 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  <%= t("user.edit.button") %>
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel"><%= t('user.edit.title') %></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= form_for(user, url: admin_path(user), remote:true, method: :patch) do |f| %>
+          <div class="d-grid gap-3 mb-3">
+            <div>
+              <%= f.label :full_name, class: "form-lable" %>
+              <%= f.text_field :full_name, autofocus: true, autocomplete: "full-name", class: "form-control", required: true %>
+            </div>
+
+            <div>
+              <%= f.label :email, class: "form-lable" %>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", required: true %>
+            </div>
+
+            <div>
+              <%= f.label :avatar_image, class: "form-lable" %>
+              <%= f.file_field :avatar_image, class: "form-control" %>
+            </div>
+            
+            <%= f.submit t("user.edit.submit_button"), class: "btn btn-primary mt-3" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

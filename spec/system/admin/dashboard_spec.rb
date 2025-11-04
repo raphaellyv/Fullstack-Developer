@@ -37,7 +37,6 @@ describe 'Admin dashboard', type: :system do
       click_on('Dashboard')
 
       expect(page).to have_link('Profile')
-
       expect(page).to have_content('3')
       expect(page).to have_content('users')
       expect(page).to have_content('1')
