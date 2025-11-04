@@ -54,10 +54,17 @@ en:
       restricted_area: "Restricted area"
     welcome: "Welcome, folks!"
   user:
+    one: "user"
+    other: "users"
     admin:
+      one: "administrator"
+      other: "administrators"
       dashboard:
         link: "Dashboard"
     edit:
       button: "Edit"
     profile:
       title: "Profile"
+    regular_user:
+      one: "regular user"
+      other: "regular users"
