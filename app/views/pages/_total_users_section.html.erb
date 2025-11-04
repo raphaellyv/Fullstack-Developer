@@ -3,7 +3,7 @@
       <div class="card">
         <div class="card-body text-center">
           <h5 class="card-title"><%= @total_users %></h5>
-          <p class="card-text"><%= t("user", count: @total_users) %></p>
+          <p class="card-text"><%= User.model_name.human(count: @total_users) %></p>
         </div>
       </div>
     </div>
@@ -11,7 +11,7 @@
       <div class="card">
         <div class="card-body text-center">
           <h5 class="card-title"><%= @total_no_admins %></h5>
-          <p class="card-text"><%= t("user.regular_user", count: @total_no_admins) %></p>
+          <p class="card-text"><%= User.human_attribute_name("role.no_admin", count: @total_no_admins) %></p>
         </div>
       </div>
     </div>
@@ -19,7 +19,7 @@
       <div class="card">
         <div class="card-body text-center">
           <h5 class="card-title"><%= @total_admins %></h5>
-          <p class="card-text"><%= t("user.admin", count: @total_admins) %></p>
+          <p class="card-text"><%= User.human_attribute_name("role.admin", count: @total_admins) %></p>
         </div>
       </div>
     </div>

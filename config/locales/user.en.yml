@@ -1,0 +1,14 @@
+en:
+  activerecord:
+    models:
+      user: 
+        one: "user"
+        other: "users"
+    attributes:
+      role:
+        admin:
+          one: "administrator"
+          other: "administrators"
+        no_admin:
+          one: "regular user"
+          other: "regular users"
