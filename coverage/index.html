@@ -13,7 +13,7 @@
       <img src="./assets/0.13.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2025-11-04T14:19:17-03:00">2025-11-04T14:19:17-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2025-11-04T15:48:20-03:00">2025-11-04T15:48:20-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -29,7 +29,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.49
+         1.47
        </span>
     </span> hits/line
     )
@@ -38,12 +38,12 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>17</b> files in total.
+    <b>18</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>321</b> relevant lines,
-    <span class="green"><b>321</b> lines covered</span> and
+    <b>323</b> relevant lines,
+    <span class="green"><b>323</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -70,6 +70,17 @@
       <tbody>
         
           <tr class="t-file">
+            <td class="strong t-file__name"><a href="#be84ae9758f79deb576e45192f8e6c1db59c91da" class="src_link" title="app/controllers/admins_controller.rb">app/controllers/admins_controller.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">19</td>
+            <td class="cell--number">12</td>
+            <td class="cell--number">12</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.50</td>
+            
+          </tr>
+        
+          <tr class="t-file">
             <td class="strong t-file__name"><a href="#5706caa82a20155cb6ee9384e71e67c1d733bc9f" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">10</td>
@@ -83,11 +94,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#fe8acaf3063779685f9928b548a572dd705c9834" class="src_link" title="app/controllers/pages_controller.rb">app/controllers/pages_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">26</td>
-            <td class="cell--number">14</td>
-            <td class="cell--number">14</td>
+            <td class="cell--number">9</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">4</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.86</td>
+            <td class="cell--number">1.00</td>
             
           </tr>
         
@@ -127,7 +138,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#523c459b13cf90a618f365bad4dc61feddd43f23" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">17</td>
+            <td class="cell--number">18</td>
             <td class="cell--number">6</td>
             <td class="cell--number">6</td>
             <td class="cell--number">0</td>
@@ -273,6 +284,251 @@
 
       <div class="source_files">
       
+        <div class="source_table" id="be84ae9758f79deb576e45192f8e6c1db59c91da">
+  <div class="header">
+    <h3>app/controllers/admins_controller.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>12</b> relevant lines.
+      <span class="green"><b>12</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class AdminsController &lt; ApplicationController</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="2">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  before_action :authenticate_user!</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  before_action :check_admin</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="4">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="5">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def dashboard</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="6">
+            
+              <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    @total_users = User.count</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="7">
+            
+              <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    @total_admins = User.admin.count</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="8">
+            
+              <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    @total_no_admins = User.no_admin.count</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="9">
+            
+              <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    @users = User.all.order(:full_name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="12">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  private</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="13">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="14">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def check_admin</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="15">
+            
+              <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">    unless current_user.admin?</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="16">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      redirect_to root_url, alert: t(&quot;messages.errors.restricted_area&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="5706caa82a20155cb6ee9384e71e67c1d733bc9f">
   <div class="header">
     <h3>app/controllers/application_controller.rb</h3>
@@ -385,7 +641,7 @@
 
             
 
-            <code class="ruby">    current_user.admin? ? dashboard_path : profile_path</code>
+            <code class="ruby">    current_user.admin? ? admins_dashboard_path : profile_path</code>
           </li>
         </div>
       
@@ -428,8 +684,8 @@
     
 
     <div class="t-line-summary">
-      <b>14</b> relevant lines.
-      <span class="green"><b>14</b> lines covered</span> and
+      <b>4</b> relevant lines.
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -530,196 +786,6 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="9">
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="10">
-            
-              <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def dashboard</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="3" data-linenumber="11">
-            
-              <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">    check_admin</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="12">
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="3" data-linenumber="13">
-            
-              <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">    @total_users = User.count</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="3" data-linenumber="14">
-            
-              <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">    @total_admins = User.admin.count</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="3" data-linenumber="15">
-            
-              <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">    @total_no_admins = User.no_admin.count</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="3" data-linenumber="16">
-            
-              <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">    @users = User.all.order(:full_name)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="17">
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="18">
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="19">
-            
-              <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  private</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="20">
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="21">
-            
-              <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def check_admin</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="3" data-linenumber="22">
-            
-              <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">    unless current_user.admin?</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="23">
-            
-              <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      redirect_to root_url, alert: t(&quot;messages.errors.restricted_area&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="24">
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="25">
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="26">
             
 
             
@@ -2041,19 +2107,29 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="16">
+          <li class="never" data-hits="" data-linenumber="16">
+            
+
+            
+
+            <code class="ruby">  # get &quot;dashboard&quot; =&gt; &quot;pages#dashboard&quot;, as: :dashboard</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="17">
             
               <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  get &quot;dashboard&quot; =&gt; &quot;pages#dashboard&quot;, as: :dashboard</code>
+            <code class="ruby">  get &quot;admins/dashboard&quot; =&gt; &quot;admins#dashboard&quot;, as: :admins_dashboard</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
+          <li class="never" data-hits="" data-linenumber="18">
             
 
             
@@ -2388,7 +2464,7 @@
 
             
 
-            <code class="ruby">    visit(dashboard_path)</code>
+            <code class="ruby">    visit(admins_dashboard_path)</code>
           </li>
         </div>
       
@@ -2536,7 +2612,7 @@
 
             
 
-            <code class="ruby">    visit(dashboard_path)</code>
+            <code class="ruby">    visit(admins_dashboard_path)</code>
           </li>
         </div>
       

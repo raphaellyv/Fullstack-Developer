@@ -12,7 +12,7 @@
           </li>
 
           <% if current_user.admin? %>
-            <%= link_to t("user.admin.dashboard.link"), dashboard_path, class: "nav-link #{ 'active' if current_page?(dashboard_path) }" %>
+            <%= link_to t("user.admin.dashboard.link"), admins_dashboard_path, class: "nav-link #{ 'active' if current_page?(admins_dashboard_path) }" %>
           <% end %>
         </ul>
         <%= button_to t("devise.sign_out.link"), destroy_user_session_path, method: :delete, class: "btn btn-outline-secondary me-2" %>

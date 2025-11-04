@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
   protected
 
   def after_sign_in_path_for(resource)
-    current_user.admin? ? dashboard_path : profile_path
+    current_user.admin? ? admins_dashboard_path : profile_path
   end
 end

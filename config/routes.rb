@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "pages#home"
   get "profile" => "pages#profile", as: :profile
-  get "dashboard" => "pages#dashboard", as: :dashboard
+  # get "dashboard" => "pages#dashboard", as: :dashboard
+  get "admins/dashboard" => "admins#dashboard", as: :admins_dashboard
 end
