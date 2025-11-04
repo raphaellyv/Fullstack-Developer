@@ -38,7 +38,6 @@ en:
         min_characters: "characters minimum"
       back_link: "Back"
     sign_in:
-      alert: "Please sign in to proceed."
       link: "Sign In"
       submit: "Sign in"
       title: "Sign In"
@@ -52,13 +51,13 @@ en:
     errors:
       image:
         content_type: "must be a JPG, JPEG or PNG"
+      restricted_area: "Restricted area"
     welcome: "Welcome, folks!"
   user:
+    admin:
+      dashboard:
+        link: "Dashboard"
     edit:
       button: "Edit"
     profile:
       title: "Profile"
-    admin:
-      dashboard:
-        link: "Dashboard"
-

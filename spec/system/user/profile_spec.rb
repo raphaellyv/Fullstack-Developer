@@ -24,7 +24,7 @@ describe 'User profile', type: :system do
 
       visit(profile_path)
 
-      expect(page).to have_content('Please sign in to proceed.')
+      expect(page).to have_content('You need to sign in or sign up before continuing.')
       expect(page).to have_button('Sign in')
       expect(page).not_to have_content('João da Silva')
       expect(page).not_to have_content('jsilva@email.com')
