@@ -37,6 +37,9 @@ describe 'Admin dashboard', type: :system do
       click_on('Dashboard')
 
       expect(page).to have_link('Profile')
+      expect(page).to have_content('Number of users: 3')
+      expect(page).to have_content('Number of administrators: 1')
+      expect(page).to have_content('Number of regular users: 2')
       expect(page).to have_content(admin.full_name)
       expect(page).to have_content(admin.email)
       expect(page).to have_content(user1.full_name)

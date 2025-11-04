@@ -9,6 +9,10 @@ class PagesController < ApplicationController
 
   def dashboard
     check_admin
+
+    @total_users = User.count
+    @total_admins = User.admin.count
+    @total_no_admins = User.no_admin.count
     @users = User.all.order(:full_name)
   end
 

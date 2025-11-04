@@ -13,7 +13,7 @@
       <img src="./assets/0.13.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2025-11-03T22:28:14-03:00">2025-11-03T22:28:14-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2025-11-04T00:52:12-03:00">2025-11-04T00:52:12-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -29,7 +29,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.49
+         1.5
        </span>
     </span> hits/line
     )
@@ -42,8 +42,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>311</b> relevant lines,
-    <span class="green"><b>311</b> lines covered</span> and
+    <b>317</b> relevant lines,
+    <span class="green"><b>317</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -83,11 +83,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#fe8acaf3063779685f9928b548a572dd705c9834" class="src_link" title="app/controllers/pages_controller.rb">app/controllers/pages_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">22</td>
-            <td class="cell--number">11</td>
-            <td class="cell--number">11</td>
+            <td class="cell--number">26</td>
+            <td class="cell--number">14</td>
+            <td class="cell--number">14</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.55</td>
+            <td class="cell--number">1.86</td>
             
           </tr>
         
@@ -171,9 +171,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#62986432693fa4f8f1ba4211a162416f6945fcac" class="src_link" title="spec/system/admin/dashboard_spec.rb">spec/system/admin/dashboard_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">48</td>
-            <td class="cell--number">34</td>
-            <td class="cell--number">34</td>
+            <td class="cell--number">51</td>
+            <td class="cell--number">37</td>
+            <td class="cell--number">37</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -428,8 +428,8 @@
     
 
     <div class="t-line-summary">
-      <b>11</b> relevant lines.
-      <span class="green"><b>11</b> lines covered</span> and
+      <b>14</b> relevant lines.
+      <span class="green"><b>14</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -563,7 +563,53 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="12">
+          <li class="never" data-hits="" data-linenumber="12">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="13">
+            
+              <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">    @total_users = User.count</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="14">
+            
+              <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">    @total_admins = User.admin.count</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="15">
+            
+              <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">    @total_no_admins = User.no_admin.count</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="16">
             
               <span class="hits">3</span>
             
@@ -575,7 +621,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="13">
+          <li class="never" data-hits="" data-linenumber="17">
             
 
             
@@ -585,58 +631,12 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="14">
+          <li class="never" data-hits="" data-linenumber="18">
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
-            
-              <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  private</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="16">
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="17">
-            
-              <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def check_admin</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="3" data-linenumber="18">
-            
-              <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">    unless current_user.admin?</code>
           </li>
         </div>
       
@@ -648,7 +648,7 @@
 
             
 
-            <code class="ruby">      redirect_to root_url, alert: t(&quot;messages.errors.restricted_area&quot;)</code>
+            <code class="ruby">  private</code>
           </li>
         </div>
       
@@ -658,12 +658,58 @@
 
             
 
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="21">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def check_admin</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="22">
+            
+              <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">    unless current_user.admin?</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="23">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      redirect_to root_url, alert: t(&quot;messages.errors.restricted_area&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="24">
+            
+
+            
+
             <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="21">
+          <li class="never" data-hits="" data-linenumber="25">
             
 
             
@@ -673,7 +719,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="22">
+          <li class="never" data-hits="" data-linenumber="26">
             
 
             
@@ -2242,8 +2288,8 @@
     
 
     <div class="t-line-summary">
-      <b>34</b> relevant lines.
-      <span class="green"><b>34</b> lines covered</span> and
+      <b>37</b> relevant lines.
+      <span class="green"><b>37</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -2708,7 +2754,7 @@
 
             
 
-            <code class="ruby">      expect(page).to have_content(admin.full_name)</code>
+            <code class="ruby">      expect(page).to have_content(&#39;Number of users: 3&#39;)</code>
           </li>
         </div>
       
@@ -2720,7 +2766,7 @@
 
             
 
-            <code class="ruby">      expect(page).to have_content(admin.email)</code>
+            <code class="ruby">      expect(page).to have_content(&#39;Number of administrators: 1&#39;)</code>
           </li>
         </div>
       
@@ -2732,7 +2778,7 @@
 
             
 
-            <code class="ruby">      expect(page).to have_content(user1.full_name)</code>
+            <code class="ruby">      expect(page).to have_content(&#39;Number of regular users: 2&#39;)</code>
           </li>
         </div>
       
@@ -2744,7 +2790,7 @@
 
             
 
-            <code class="ruby">      expect(page).to have_content(user1.email)</code>
+            <code class="ruby">      expect(page).to have_content(admin.full_name)</code>
           </li>
         </div>
       
@@ -2756,7 +2802,7 @@
 
             
 
-            <code class="ruby">      expect(page).to have_content(user2.full_name)</code>
+            <code class="ruby">      expect(page).to have_content(admin.email)</code>
           </li>
         </div>
       
@@ -2768,12 +2814,48 @@
 
             
 
+            <code class="ruby">      expect(page).to have_content(user1.full_name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="46">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(page).to have_content(user1.email)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="47">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(page).to have_content(user2.full_name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="48">
+            
+              <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">      expect(page).to have_content(user2.email)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="46">
+          <li class="never" data-hits="" data-linenumber="49">
             
 
             
@@ -2783,7 +2865,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="47">
+          <li class="never" data-hits="" data-linenumber="50">
             
 
             
@@ -2793,7 +2875,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="48">
+          <li class="never" data-hits="" data-linenumber="51">
             
 
             
