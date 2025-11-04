@@ -12,7 +12,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <%= form_for(user, url: admin_path(user), remote:true, method: :patch) do |f| %>
+        <%= form_for(user, url: admin_path(user), method: :patch) do |f| %>
           <div class="d-grid gap-3 mb-3">
             <div>
               <%= f.label :full_name, class: "form-lable" %>

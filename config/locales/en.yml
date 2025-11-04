@@ -53,6 +53,7 @@ en:
         content_type: "must be a JPG, JPEG or PNG"
       restricted_area: "Restricted area"
     welcome: "Welcome, folks!"
+    user_update_success: "The user has been updated successfully."
   user:
     admin:
       dashboard:
