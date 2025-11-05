@@ -16,7 +16,7 @@ describe 'Edit user', type: :system do
     expect(page).to have_content('6 characters minimum')
     expect(page).to have_content('Password confirmation')
     expect(page).to have_content('Current password (we need your current password to confirm your changes)')
-    expect(page).to have_link('Back')
+    expect(page).to have_link('Cancel')
   end
 
   context 'fails' do
@@ -75,5 +75,16 @@ describe 'Edit user', type: :system do
       expect(page).to have_content('Marta Souza')
       expect(page).to have_content('marta@email.com')
     end
+  end
+
+  it 'returns to the profile page if canceled' do
+    user = create(:user)
+    login_as(user)
+
+    visit(profile_path)
+    click_on('Edit')
+    click_on('Cancel')
+
+    expect(page).to have_current_path('/profile')
   end
 end

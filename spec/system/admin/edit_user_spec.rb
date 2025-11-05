@@ -16,11 +16,11 @@ describe 'Admin edit user', type: :system do
   end
 
   it 'updates the user information' do
-    admin = create(:user, role: :admin, full_name: 'Abel A', email: 'a@email.com')
+    admin = create(:user, role: :admin)
+    user = create(:user, full_name: 'Abel A', email: 'a@email.com')
     login_as(admin)
 
-    visit(admin_dashboard_path)
-    click_on('Edit')
+    visit(edit_admin_path(user.id))
     fill_in 'Full name', with: 'Abel B'
     fill_in 'Email', with: 'b@email.com'
     click_on('Update')
@@ -29,5 +29,30 @@ describe 'Admin edit user', type: :system do
     expect(page).to have_content('b@email.com')
     expect(page).not_to have_content('Abel A')
     expect(page).not_to have_content('a@email.com')
+  end
+
+  it 'shows validation errors' do
+    admin = create(:user, role: :admin, email: 'b@email.com')
+    user = create(:user, full_name: 'Abel A', email: 'a@email.com')
+    login_as(admin)
+
+    visit(edit_admin_path(user.id))
+    fill_in 'Full name', with: 'Abel B'
+    fill_in 'Email', with: 'b@email.com'
+    click_on('Update')
+
+    expect(page).to have_content('1 error prohibited this user from being saved:')
+    expect(page).to have_content("Email has already been taken")
+  end
+
+  it 'returns to the dashboard if canceled' do
+    admin = create(:user, role: :admin)
+    user = create(:user)
+    login_as(admin)
+
+    visit(edit_admin_path(user.id))
+    click_on('Cancel')
+
+    expect(page).to have_current_path('/admin/dashboard')
   end
 end

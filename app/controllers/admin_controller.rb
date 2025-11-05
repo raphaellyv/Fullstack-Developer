@@ -9,11 +9,17 @@ class AdminController < ApplicationController
     @users = User.all.order(:full_name)
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
   def update
     @user = User.find(params[:id])
 
     if @user.update(user_params)
       redirect_to admin_dashboard_url, notice: t("messages.user_update_success")
+    else
+      render "edit"
     end
   end
 

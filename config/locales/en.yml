@@ -36,7 +36,7 @@ en:
       new_password:
         info: "(leave blank if you don't want to change it)"
         min_characters: "characters minimum"
-      back_link: "Back"
+      cancel: "Cancel"
     sign_in:
       link: "Sign In"
       submit: "Sign in"
@@ -63,5 +63,6 @@ en:
       title: "Edit User"
       button: "Edit"
       submit_button: "Update"
+      cancel_button: "Cancel"
     profile:
       title: "Profile"
