@@ -44,6 +44,7 @@ describe 'Admin dashboard', type: :system do
       expect(page).to have_content('2')
       expect(page).to have_content('regular users')
       expect(page).to have_content('User')
+      expect(page).to have_content('Role')
       expect(page).to have_content(admin.full_name)
       expect(page).to have_content(admin.email)
       expect(page).to have_content(user1.full_name)

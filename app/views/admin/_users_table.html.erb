@@ -3,6 +3,7 @@
       <tr>
         <th scope="col"></th>
         <th scope="col"><%= User.model_name.human.capitalize %></th>
+        <th scope="col"><%= User.human_attribute_name("role") %></th>
         <th scope="col"></th>
       </tr>
     </thead>
@@ -14,6 +15,7 @@
             <p class="fs-6"><%= user.full_name %></p>
             <p class="text-body-secondary fs-6"><%= user.email %></p>
           </td>
+          <td><%= t("user.admin.dashboard.admin_role") if user.admin? %></td>
           <td><%= link_to t("user.edit.button"), edit_admin_path(user), class: "btn btn-secondary" %></td>
         </tr>
       <% end %>
