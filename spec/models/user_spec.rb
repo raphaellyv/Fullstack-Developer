@@ -7,7 +7,6 @@ RSpec.describe User, type: :model do
     it { should validate_presence_of(:full_name) }
     it { should validate_presence_of(:email) }
     it { should validate_presence_of(:role) }
-    it { should validate_presence_of(:password) }
 
     it {
       should define_enum_for(:role).with_values({
@@ -85,6 +84,23 @@ RSpec.describe User, type: :model do
       user.save!
 
       expect(user.role).to eq('no_admin')
+    end
+  end
+
+  describe '#generate_password' do
+    it 'generates a password for basic users' do
+      expect(User.count).to eq 0
+
+      user = User.new(full_name: 'Abel A', email: 'a@email.com')
+      user.avatar_image.attach(
+        io: File.open(Rails.root.join('spec', 'fixtures', 'files', 'avatar_image.jpg')),
+        filename: 'avatar_image.jpg',
+        content_type: 'image/jpg'
+      )
+      user.save!
+
+      expect(User.count).to eq 1
+      expect(User.last.full_name).to eq('Abel A')
     end
   end
 end

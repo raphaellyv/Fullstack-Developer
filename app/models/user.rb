@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_one_attached :avatar_image
 
+  before_validation :generate_password, on: :create, unless: :password_present?
+
   validates :full_name, :email, :role, :avatar_image, presence: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }, if: :email_present?
 
@@ -24,5 +26,13 @@ class User < ApplicationRecord
 
   def email_present?
     email.present?
+  end
+
+  def password_present?
+    password.present?
+  end
+
+  def generate_password
+    self.password = SecureRandom.alphanumeric(9)
   end
 end

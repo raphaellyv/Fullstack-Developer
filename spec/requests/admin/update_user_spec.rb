@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe 'Edit user', type: :request do
+describe 'PATCH /admin/id', type: :request do
   context 'before login' do
     it 'redirects to login' do
       user1 = create(:user)

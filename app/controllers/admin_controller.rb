@@ -9,12 +9,26 @@ class AdminController < ApplicationController
     @users = User.all.order(:full_name)
   end
 
+  def new
+    @user = User.new
+  end
+
+  def create
+    @user = User.new(user_params)
+
+    if @user.save
+      redirect_to admin_dashboard_url, notice: t("messages.user_create_success")
+    else
+      render "new"
+    end
+  end
+
   def edit
-    @user = User.find(params[:id])
+    set_user
   end
 
   def update
-    @user = User.find(params[:id])
+    set_user
 
     if @user.update(user_params)
       redirect_to admin_dashboard_url, notice: t("messages.user_update_success")
@@ -33,5 +47,9 @@ class AdminController < ApplicationController
 
   def user_params
     params.expect(user: [ :full_name, :id, :email, :avatar_image ])
+  end
+
+  def set_user
+    @user = User.find(params[:id])
   end
 end

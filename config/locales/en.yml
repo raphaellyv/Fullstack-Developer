@@ -64,5 +64,10 @@ en:
       button: "Edit"
       submit_button: "Update"
       cancel_button: "Cancel"
+    new:
+      link: "Create new user"
+      title: "New User"
+      submit_button: "Create user"
+      cancel_button: "Cancel"
     profile:
       title: "Profile"

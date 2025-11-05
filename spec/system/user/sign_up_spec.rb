@@ -37,9 +37,9 @@ describe 'User sign-up', type: :system do
 
       expect(page).to have_content('4 errors prohibited this user from being saved:')
       expect(page).to have_content("Email can't be blank")
-      expect(page).to have_content("Password can't be blank")
       expect(page).to have_content("Full name can't be blank")
       expect(page).to have_content("Avatar image can't be blank")
+      expect(page).to have_content("Password confirmation doesn't match Password")
     end
   end
 end
