@@ -23,8 +23,11 @@ describe 'Admin edit user', type: :system do
     visit(edit_admin_path(user.id))
     fill_in 'Full name', with: 'Abel B'
     fill_in 'Email', with: 'b@email.com'
+    select 'administrator', from: 'Role'
     click_on('Update')
 
+    expect(page).to have_content('2')
+    expect(page).to have_content('administrators')
     expect(page).to have_content('Abel B')
     expect(page).to have_content('b@email.com')
     expect(page).not_to have_content('Abel A')

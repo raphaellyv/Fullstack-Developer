@@ -24,6 +24,7 @@ class AdminController < ApplicationController
   end
 
   def edit
+    @roles_options = User.roles.keys
     set_user
   end
 
@@ -33,6 +34,7 @@ class AdminController < ApplicationController
     if @user.update(user_params)
       redirect_to admin_dashboard_url, notice: t("messages.user_update_success")
     else
+      @roles_options = User.roles.keys
       render "edit"
     end
   end
@@ -46,7 +48,7 @@ class AdminController < ApplicationController
   end
 
   def user_params
-    params.expect(user: [ :full_name, :id, :email, :avatar_image ])
+    params.expect(user: [ :full_name, :id, :email, :avatar_image, :role ])
   end
 
   def set_user

@@ -30,12 +30,13 @@ describe 'PATCH /admin/id', type: :request do
       user = create(:user, full_name: 'Abel A', email: 'a@email.com')
       login_as(admin)
 
-      patch(admin_path(user.id), params: { user: { full_name: 'Abel B', email: 'b@email.com' } })
+      patch(admin_path(user.id), params: { user: { full_name: 'Abel B', email: 'b@email.com', role: 'admin' } })
       user.reload
 
       expect(response).to redirect_to(admin_dashboard_url)
       expect(user.full_name).to eq('Abel B')
       expect(user.email).to eq('b@email.com')
+      expect(user.admin?).to eq(true)
     end
   end
 end

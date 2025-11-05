@@ -27,6 +27,11 @@
       </div>
 
       <div>
+        <%= f.label :role, class: "form-lable" %>
+        <%= f.select :role, @roles_options.map { |w| [User.human_attribute_name("role.#{w}"), w] }, {}, { class: "form-select" } %>
+      </div>
+
+      <div>
         <%= f.submit t("user.edit.submit_button"), class: "btn btn-primary w-100" %>
       </div>
 
