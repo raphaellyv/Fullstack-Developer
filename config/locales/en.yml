@@ -30,6 +30,7 @@
 en:
   app_name: Users Management App
   devise:
+    cancel_account: "Cancel my account"
     edit:
       avatar_image:
           info: "(leave blank if you don't want to change it)"
@@ -52,5 +53,6 @@ en:
       image:
         content_type: "must be a JPG, JPEG or PNG"
       restricted_area: "Restricted area"
+    destroy_user_success: "The user was successfully destroyed."
     welcome: "Welcome, folks!"
-    user_update_success: "The user has been updated successfully."
+    update_user_success: "The user has been updated successfully."

@@ -5,6 +5,9 @@ en:
           link: "Dashboard"
           create_new_user: "Create new user"
           admin_role: "admin"
+        remove_user:
+          title: "Remove this user"
+          button: "Remove user"
       edit:
         title: "Edit User"
         button: "Edit"
@@ -17,6 +20,7 @@ en:
         cancel_button: "Cancel"
       profile:
         title: "Profile"
+      remove_user: "Remove user"
   activerecord:
     models:
       user: 

@@ -32,11 +32,17 @@ class AdminController < ApplicationController
     set_user
 
     if @user.update(user_params)
-      redirect_to admin_dashboard_url, notice: t("messages.user_update_success")
+      redirect_to admin_dashboard_url, notice: t("messages.update_user_success"), status: :see_other
     else
       @roles_options = User.roles.keys
       render "edit"
     end
+  end
+
+  def destroy
+    set_user
+    @user.destroy!
+    redirect_to admin_dashboard_url, notice: t("messages.destroy_user_success"), status: :see_other
   end
 
   private
