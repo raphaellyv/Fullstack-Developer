@@ -53,6 +53,8 @@ en:
       image:
         content_type: "must be a JPG, JPEG or PNG"
       restricted_area: "Restricted area"
-    destroy_user_success: "The user was successfully destroyed."
+      update_last_admin_to_no_admin: "In order to change this user's role, please create another administrator."
+    destroy_user_success: "The user has been removed successfully."
+    destroy_user_last_admin: "In order to remove this user, please create another administrator."
     welcome: "Welcome, folks!"
     update_user_success: "The user has been updated successfully."

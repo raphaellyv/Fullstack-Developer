@@ -31,8 +31,12 @@ class AdminController < ApplicationController
   def update
     set_user
 
-    if @user.update(user_params)
-      redirect_to admin_dashboard_url, notice: t("messages.update_user_success"), status: :see_other
+    if @user.admin? && User.admin.count == 1 && user_params[:role] == "no_admin"
+      flash.now[:alert] = t("messages.errors.update_last_admin_to_no_admin")
+      @roles_options = User.roles.keys
+      render "edit"
+    elsif @user.update(user_params)
+        redirect_to admin_dashboard_url, notice: t("messages.update_user_success"), status: :see_other
     else
       @roles_options = User.roles.keys
       render "edit"
@@ -41,8 +45,15 @@ class AdminController < ApplicationController
 
   def destroy
     set_user
-    @user.destroy!
-    redirect_to admin_dashboard_url, notice: t("messages.destroy_user_success"), status: :see_other
+
+    if @user.admin? && User.admin.count == 1
+      flash.now[:alert] = t("messages.destroy_user_last_admin")
+      @roles_options = User.roles.keys
+      render "edit"
+    else
+      @user.destroy!
+      redirect_to admin_dashboard_url, notice: t("messages.destroy_user_success"), status: :see_other
+    end
   end
 
   private

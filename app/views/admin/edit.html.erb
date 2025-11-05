@@ -41,7 +41,6 @@
   <br>
   <div class="d-grid gap-3 mb-3"> 
     <h3><%= t("user.admin.remove_user.title") %></h3>
-    <%= button_to t("user.admin.remove_user.button"), admin_path(@user.id), method: :delete, class: "btn btn-danger", form: { data: { turbo_confirm: "Are you sure?" } } %>
-    <%# <%= button_to t("user.admin.remove_user"), registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger w-100" %> %>
+    <%= button_to t("user.admin.remove_user.button"), admin_path(@user.id), method: :delete, class: "btn btn-danger w-100", form: { data: { turbo_confirm: "Are you sure?" } } %>
   </div>
 </div>

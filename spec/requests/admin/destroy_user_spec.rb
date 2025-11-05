@@ -27,7 +27,7 @@ describe 'DELETE admin/id', type: :request do
   end
 
   context 'as an admin' do
-    it 'returns status success' do
+    it 'returns error message' do
       admin = create(:user, role: :admin)
       user = create(:user)
       login_as(admin)
