@@ -42,6 +42,7 @@ gem "simplecov", require: false, group: :test
 
 gem "csv"
 gem "down", "~> 5.0"
+gem "pagy", "~> 43.0"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
