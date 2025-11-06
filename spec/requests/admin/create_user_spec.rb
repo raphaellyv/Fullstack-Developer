@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe 'POST /admin', type: :system do
+describe 'POST /admin', type: :request do
   context 'before login' do
     it 'redirects to login' do
       user1 = create(:user)

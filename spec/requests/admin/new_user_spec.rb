@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe 'GET /admin/new', type: :system do
+describe 'GET /admin/new', type: :request do
   context 'before login' do
     it 'redirects to login' do
       user = create(:user)
