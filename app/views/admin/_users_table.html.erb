@@ -18,7 +18,7 @@
             <p class="fs-6"><%= user.full_name %></p>
             <p class="text-body-secondary fs-6"><%= user.email %></p>
           </td>
-          <td><%= t("user.admin.dashboard.admin_role") if user.admin? %></td>
+          <td><%= User.human_attribute_name("role.#{user.role}") %></td>
           <td><%= link_to t("user.edit.button"), edit_admin_path(user), class: "btn btn-secondary" %></td>
         </tr>
       <% end %>
