@@ -13,7 +13,7 @@
       <img src="./assets/0.13.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2025-11-06T04:23:40-03:00">2025-11-06T04:23:40-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2025-11-06T04:27:47-03:00">2025-11-06T04:27:47-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -42,8 +42,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>761</b> relevant lines,
-    <span class="green"><b>761</b> lines covered</span> and
+    <b>762</b> relevant lines,
+    <span class="green"><b>762</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -131,18 +131,18 @@
             <td class="cell--number">21</td>
             <td class="cell--number">21</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">25.19</td>
+            <td class="cell--number">25.10</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#5c2c9dec60d4ee6c6709c0458375cd9d8be35777" class="src_link" title="app/services/csv_import_service.rb">app/services/csv_import_service.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">33</td>
-            <td class="cell--number">17</td>
-            <td class="cell--number">17</td>
+            <td class="cell--number">34</td>
+            <td class="cell--number">18</td>
+            <td class="cell--number">18</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">5.18</td>
+            <td class="cell--number">5.33</td>
             
           </tr>
         
@@ -2583,7 +2583,7 @@
 
             
 
-            <code class="ruby">    attachable.variant :thumb, resize_to_limit: [50, 50], saver: { quality: 75 }</code>
+            <code class="ruby">    attachable.variant :thumb, resize_to_limit: [ 50, 50 ], saver: { quality: 75 }</code>
           </li>
         </div>
       
@@ -2595,7 +2595,7 @@
 
             
 
-            <code class="ruby">    attachable.variant :medium, resize_to_limit: [500, 500], saver: { quality: 85 }</code>
+            <code class="ruby">    attachable.variant :medium, resize_to_limit: [ 500, 500 ], saver: { quality: 85 }</code>
           </li>
         </div>
       
@@ -2766,9 +2766,9 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="125" data-linenumber="25">
+          <li class="covered" data-hits="123" data-linenumber="25">
             
-              <span class="hits">125</span>
+              <span class="hits">123</span>
             
 
             
@@ -2970,8 +2970,8 @@
     
 
     <div class="t-line-summary">
-      <b>17</b> relevant lines.
-      <span class="green"><b>17</b> lines covered</span> and
+      <b>18</b> relevant lines.
+      <span class="green"><b>18</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -3150,7 +3150,7 @@
 
             
 
-            <code class="ruby">      image_url = user_hash[&quot;avatar_image_url&quot;]</code>
+            <code class="ruby">      user = User.new(full_name: user_hash[&quot;full_name&quot;], email: user_hash[&quot;email&quot;])</code>
           </li>
         </div>
       
@@ -3160,7 +3160,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      </code>
           </li>
         </div>
       
@@ -3172,41 +3172,43 @@
 
             
 
-            <code class="ruby">      tempfile = Down.download(image_url)</code>
+            <code class="ruby">      image_url = user_hash[&quot;avatar_image_url&quot;]</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="18">
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="12" data-linenumber="19">
+          <li class="covered" data-hits="12" data-linenumber="18">
             
               <span class="hits">12</span>
             
 
             
 
-            <code class="ruby">      user = User.new(full_name: user_hash[&quot;full_name&quot;], email: user_hash[&quot;email&quot;])</code>
+            <code class="ruby">      if image_url</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="20">
+          <li class="covered" data-hits="10" data-linenumber="19">
             
-              <span class="hits">12</span>
+              <span class="hits">10</span>
+            
+
+            
+
+            <code class="ruby">        tempfile = Down.download(image_url)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="10" data-linenumber="20">
+            
+              <span class="hits">10</span>
             
 
             
 
-            <code class="ruby">      user.avatar_image.attach(</code>
+            <code class="ruby">        user.avatar_image.attach(</code>
           </li>
         </div>
       
@@ -3216,7 +3218,7 @@
 
             
 
-            <code class="ruby">        io: tempfile,</code>
+            <code class="ruby">          io: tempfile,</code>
           </li>
         </div>
       
@@ -3226,7 +3228,7 @@
 
             
 
-            <code class="ruby">        filename: tempfile.original_filename,</code>
+            <code class="ruby">          filename: tempfile.original_filename,</code>
           </li>
         </div>
       
@@ -3236,7 +3238,7 @@
 
             
 
-            <code class="ruby">        content_type: tempfile.content_type</code>
+            <code class="ruby">          content_type: tempfile.content_type</code>
           </li>
         </div>
       
@@ -3246,7 +3248,7 @@
 
             
 
-            <code class="ruby">      )</code>
+            <code class="ruby">        )</code>
           </li>
         </div>
       
@@ -3256,12 +3258,22 @@
 
             
 
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="26">
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="26">
+          <li class="covered" data-hits="12" data-linenumber="27">
             
               <span class="hits">12</span>
             
@@ -3273,7 +3285,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="27">
+          <li class="never" data-hits="" data-linenumber="28">
             
 
             
@@ -3283,7 +3295,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="28">
+          <li class="never" data-hits="" data-linenumber="29">
             
 
             
@@ -3293,7 +3305,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="29">
+          <li class="never" data-hits="" data-linenumber="30">
             
 
             
@@ -3303,7 +3315,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="30">
+          <li class="covered" data-hits="1" data-linenumber="31">
             
               <span class="hits">1</span>
             
@@ -3315,7 +3327,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="31">
+          <li class="covered" data-hits="2" data-linenumber="32">
             
               <span class="hits">2</span>
             
@@ -3327,7 +3339,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="32">
+          <li class="never" data-hits="" data-linenumber="33">
             
 
             
@@ -3337,7 +3349,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="33">
+          <li class="never" data-hits="" data-linenumber="34">
             
 
             
