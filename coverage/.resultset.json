@@ -296,7 +296,7 @@
           null
         ]
       },
-      "/home/raphaelly/Fullstack-Developer/spec/system/admin/create_user_spec.rb": {
+      "/home/raphaelly/Fullstack-Developer/spec/system/admin/admin_create_user_spec.rb": {
         "lines": [
           1,
           null,
@@ -355,7 +355,7 @@
           null
         ]
       },
-      "/home/raphaelly/Fullstack-Developer/spec/system/admin/dashboard_spec.rb": {
+      "/home/raphaelly/Fullstack-Developer/spec/system/admin/admin_dashboard_spec.rb": {
         "lines": [
           1,
           null,
@@ -415,7 +415,7 @@
           null
         ]
       },
-      "/home/raphaelly/Fullstack-Developer/spec/system/admin/edit_user_spec.rb": {
+      "/home/raphaelly/Fullstack-Developer/spec/system/admin/admin_edit_user_spec.rb": {
         "lines": [
           1,
           null,
@@ -511,7 +511,7 @@
           null
         ]
       },
-      "/home/raphaelly/Fullstack-Developer/spec/system/admin/remove_user_spec.rb": {
+      "/home/raphaelly/Fullstack-Developer/spec/system/admin/admin_remove_user_spec.rb": {
         "lines": [
           1,
           null,
@@ -598,7 +598,7 @@
           null
         ]
       },
-      "/home/raphaelly/Fullstack-Developer/spec/system/admin/sign_in_spec.rb": {
+      "/home/raphaelly/Fullstack-Developer/spec/system/admin/admin_sign_in_spec.rb": {
         "lines": [
           1,
           null,
@@ -682,7 +682,7 @@
           null
         ]
       },
-      "/home/raphaelly/Fullstack-Developer/spec/system/user/cancel_account_spec.rb": {
+      "/home/raphaelly/Fullstack-Developer/spec/system/user/user_cancel_account_spec.rb": {
         "lines": [
           1,
           null,
@@ -720,7 +720,7 @@
           null
         ]
       },
-      "/home/raphaelly/Fullstack-Developer/spec/system/user/edit_spec.rb": {
+      "/home/raphaelly/Fullstack-Developer/spec/system/user/user_edit_spec.rb": {
         "lines": [
           1,
           null,
@@ -814,7 +814,7 @@
           null
         ]
       },
-      "/home/raphaelly/Fullstack-Developer/spec/system/user/profile_spec.rb": {
+      "/home/raphaelly/Fullstack-Developer/spec/system/user/user_profile_spec.rb": {
         "lines": [
           1,
           null,
@@ -851,7 +851,7 @@
           null
         ]
       },
-      "/home/raphaelly/Fullstack-Developer/spec/system/user/remove_user_spec.rb": {
+      "/home/raphaelly/Fullstack-Developer/spec/system/user/user_remove_user_spec.rb": {
         "lines": [
           1,
           null,
@@ -889,7 +889,7 @@
           null
         ]
       },
-      "/home/raphaelly/Fullstack-Developer/spec/system/user/sign_in_spec.rb": {
+      "/home/raphaelly/Fullstack-Developer/spec/system/user/user_sign_in_spec.rb": {
         "lines": [
           1,
           null,
@@ -951,7 +951,7 @@
           null
         ]
       },
-      "/home/raphaelly/Fullstack-Developer/spec/system/user/sign_up_spec.rb": {
+      "/home/raphaelly/Fullstack-Developer/spec/system/user/user_sign_up_spec.rb": {
         "lines": [
           1,
           null,
@@ -1199,6 +1199,6 @@
         ]
       }
     },
-    "timestamp": 1762387787
+    "timestamp": 1762388644
   }
 }
