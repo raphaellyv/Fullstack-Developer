@@ -9,9 +9,9 @@ FactoryBot.define do
 
     after(:build) do |user|
       user.avatar_image.attach(
-        io: File.open(Rails.root.join("spec", "fixtures", "files", "avatar_image.jpg")),
-        filename: "avatar_image.jpg",
-        content_type: "image/jpg"
+        io: File.open(Rails.root.join("public", "icon.png")),
+        filename: "icon.png",
+        content_type: "image/png"
       )
     end
   end
