@@ -10,7 +10,7 @@
     <tbody>
       <% @users.each do |user| %>
         <tr>
-          <td class="text-end"><%= image_tag user.avatar_image, class: "img-thumbnail", alt: "avatar", style: "max-height: 90px;" %></td>
+          <td class="text-end"><%= image_tag user.avatar_image.variant(:thumb), class: "img-thumbnail", alt: "avatar", style: "max-height: 90px;" %></td>
           <td>
             <p class="fs-6"><%= user.full_name %></p>
             <p class="text-body-secondary fs-6"><%= user.email %></p>
