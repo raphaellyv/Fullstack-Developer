@@ -58,3 +58,4 @@ en:
     destroy_user_last_admin: "In order to remove this user, please create another administrator."
     welcome: "Welcome, folks!"
     update_user_success: "The user has been updated successfully."
+    turbo_confirm: "Are you sure?"
