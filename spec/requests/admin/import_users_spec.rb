@@ -53,7 +53,9 @@ describe 'POST /admin/import_users', type: :request do
       post(import_admin_index_path, params: { file: file })
 
       expect(User.count).to eq(6)
-      expect(User.pluck(:full_name)).to eq([ 'Abel Duarte', 'Alice Souza', 'Marcos Souza', 'Helena Silva', 'Carla Andrade', 'Monique Leite' ])
+      expect(User.order(:full_name).pluck(:full_name)).to eq(
+        [ 'Abel Duarte', 'Alice Souza', 'Carla Andrade', 'Helena Silva', 'Marcos Souza', 'Monique Leite' ]
+      )
       expect(response).to redirect_to(admin_dashboard_url)
     end
   end

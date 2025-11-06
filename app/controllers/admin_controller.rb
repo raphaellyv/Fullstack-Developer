@@ -63,8 +63,7 @@ class AdminController < ApplicationController
     return redirect_to admin_dashboard_url, alert: t("messages.errors.upload_csv.content_type") unless file.content_type == "text/csv"
 
     csv = CsvImportService.new(file)
-    csv.import
-
+    csv.import_users
     redirect_to admin_dashboard_url, notice: t("messages.users_successfully_uploaded", count: csv.number_imported_with_last_run)
   end
 

@@ -1,6 +1,8 @@
 require "rails_helper"
 
 describe 'Admin import users', type: :system do
+  let(:file) { fixture_file_upload(Rails.root.join('spec', 'fixtures', 'files', 'sample_users_file.csv'), 'text/csv') }
+
   it 'is acessed through the admin dashboard' do
     admin = create(:user, role: :admin)
     login_as(admin)
