@@ -15,5 +15,7 @@ Rails.application.routes.draw do
   get "profile" => "pages#profile", as: :profile
 
   get "admin/dashboard" => "admin#dashboard", as: :admin_dashboard
-  resources :admin, only: [ :new, :create, :edit, :update, :destroy ]
+  resources :admin, only: [ :new, :create, :edit, :update, :destroy ] do
+    post :import, on: :collection
+  end
 end

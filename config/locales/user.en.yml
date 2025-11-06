@@ -5,6 +5,7 @@ en:
           link: "Dashboard"
           create_new_user: "Create new user"
           admin_role: "admin"
+          import_button: "Upload Users"
         remove_user:
           title: "Remove this user"
           button: "Remove user"

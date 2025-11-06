@@ -56,6 +56,18 @@ class AdminController < ApplicationController
     end
   end
 
+  def import
+    file = params[:file]
+
+    return redirect_to admin_dashboard_url, alert: t("messages.errors.upload_csv.no_file_selected") unless file
+    return redirect_to admin_dashboard_url, alert: t("messages.errors.upload_csv.content_type") unless file.content_type == "text/csv"
+
+    csv = CsvImportService.new(file)
+    csv.import
+
+    redirect_to admin_dashboard_url, notice: t("messages.users_successfully_uploaded", count: csv.number_imported_with_last_run)
+  end
+
   private
 
   def check_admin
