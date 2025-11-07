@@ -7,7 +7,7 @@
     <div class="d-grid gap-3 mb-3">
       <% if @user.avatar_image.variant(:medium) %>
         <div class="text-center">
-          <%= image_tag @user.avatar_image.variant(:medium), class: "img-thumbnail", alt: "avatar", style: "max-height: 150px;" %>
+          <%= image_tag @user.avatar_image.variant(:medium), class: "img-thumbnail rounded-circle", alt: "avatar", style: "max-height: 150px;" %>
         </div>
       <% end %>
 
