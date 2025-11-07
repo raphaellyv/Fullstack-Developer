@@ -6,7 +6,7 @@ class AdminController < ApplicationController
     @total_users = User.count
     @total_admins = User.admin.count
     @total_no_admins = User.no_admin.count
-    @pagy, @users = pagy(:keyset, User.order(:full_name).all)
+    @pagy, @records = pagy(:offset, User.order(:full_name))
   end
 
   def new
