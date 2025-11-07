@@ -51,6 +51,7 @@ describe 'Admin dashboard', type: :system do
       expect(page).to have_content(user1.email)
       expect(page).to have_content(user2.full_name)
       expect(page).to have_content(user2.email)
+      expect(page).to have_css('.pagy-bootstrap.series-nav')
     end
   end
 end
