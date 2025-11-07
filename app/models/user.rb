@@ -11,7 +11,7 @@ class User < ApplicationRecord
 
   before_validation :generate_password, on: :create, unless: :password_present?
 
-  validates :full_name, :email, :role, :avatar_image, presence: true
+  validates :full_name, :email, :role, presence: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }, if: :email_present?
   validate :avatar_image_content_type
 

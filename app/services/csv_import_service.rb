@@ -13,26 +13,27 @@ class CsvImportService
     users_to_import = []
 
     CSV.foreach(@file.path, headers: true) do |row|
-      image_url = row["avatar_image_url"]
-
-      if image_url.present?
-        user = User.new(full_name: row["full_name"], email: row["email"])
-
-        tempfile = Down.download(image_url)
-        user.avatar_image.attach(
-          io: tempfile,
-          filename: tempfile.original_filename,
-          content_type: tempfile.content_type
-        )
-
-        users_to_import << user
-      end
+      user = row.to_h
+      users_to_import << user if user["avatar_image_url"]
     end
 
     User.import users_to_import, on_duplicate_key_ignore: true
 
     total_users_after_import = User.count
     @count = total_users_after_import - total_users_before_import
+
+    users_to_import.each do |imported_user|
+      created_user = User.find_by(email: imported_user["email"])
+
+      if created_user
+        tempfile = Down.download(created_user.avatar_image_url)
+        created_user.avatar_image.attach(
+          io: tempfile,
+          filename: tempfile.original_filename,
+          content_type: tempfile.content_type
+        )
+      end
+    end
   end
 
   def number_imported_with_last_run
