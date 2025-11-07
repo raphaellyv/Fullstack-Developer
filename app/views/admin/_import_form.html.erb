@@ -3,6 +3,6 @@
     <%= f.file_field :file, accept: ".csv", class: "form-control" %>
   </div>
   <div class="col-auto">
-    <%= f.submit t("user.admin.dashboard.import_button"), class: "btn btn-primary" %>
+    <%= f.submit t("user.admin.dashboard.import_button"), data: { turbo_submits_with: t("user.admin.dashboard.import_button_loading") }, class: "btn btn-primary" %>
   </div>
 <% end %>

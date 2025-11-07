@@ -6,6 +6,7 @@ en:
           create_new_user: "Create new user"
           admin_role: "admin"
           import_button: "Upload Users"
+          import_button_loading: "Uploading..."
         remove_user:
           title: "Remove this user"
           button: "Remove user"
