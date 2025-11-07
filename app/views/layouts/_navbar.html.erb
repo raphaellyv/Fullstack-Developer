@@ -23,7 +23,12 @@
         <%= button_to t("devise.sign_out.link"), destroy_user_session_path, method: :delete, class: "btn btn-outline-secondary me-2" %>
       <% else %>
         <div class="navbar-nav me-auto mb-2 mb-lg-0"></div>
-        <%= link_to t("devise.sign_in.link"), new_user_session_path, class: "btn btn-outline-primary me-2" %>
+        <ul class="navbar-nav me-2 mb-lg-0">
+          <li class="nav-item">
+            <%= link_to t("devise.sign_in.link"), new_user_session_path, class: "nav-link active" %>
+          </li>
+          <%= link_to t("devise.sign_up.link"), new_user_registration_path, class: "btn btn-primary me-2" %>
+        </ul>
       <% end %>
     </div>
   </div>

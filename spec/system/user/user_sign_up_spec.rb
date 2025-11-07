@@ -4,8 +4,7 @@ describe 'User sign-up', type: :system do
   context 'success' do
     it 'shows user first name and sign out option' do
       visit(root_path)
-      click_on('Sign In')
-      click_on('Sign up')
+      click_on('Sign Up')
 
       within 'form' do
         fill_in 'Full name', with: 'João da Silva'
@@ -28,8 +27,7 @@ describe 'User sign-up', type: :system do
   context 'fails' do
     it 'shows error message' do
       visit(root_path)
-      click_on('Sign In')
-      click_on('Sign up')
+      click_on('Sign Up')
 
       page.attach_file('Avatar image', Rails.root.join('spec', 'fixtures', 'files', 'avatar_image.gif'))
       within 'form' do
