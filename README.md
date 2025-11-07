@@ -87,6 +87,11 @@ bundle exec rspec
 bin/rubocop
 ```
 
-## Users csv file
+## Users CSV File
 
 An example of csv file for the importation of users is available on 'spec/fixtures/files/sample_users_file.csv'.
+
+## Login
+
+- Regular user: user@email.com (password: 123456)
+- Administrator: admin@email.com (password: 123456)
