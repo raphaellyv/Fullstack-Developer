@@ -31,14 +31,16 @@ describe 'User sign-up', type: :system do
       click_on('Sign In')
       click_on('Sign up')
 
+      page.attach_file('Avatar image', Rails.root.join('spec', 'fixtures', 'files', 'avatar_image.gif'))
       within 'form' do
         click_on('Sign up')
       end
 
-      expect(page).to have_content('3 errors prohibited this user from being saved:')
+      expect(page).to have_content('4 errors prohibited this user from being saved:')
       expect(page).to have_content("Email can't be blank")
       expect(page).to have_content("Full name can't be blank")
       expect(page).to have_content("Password confirmation doesn't match Password")
+      expect(page).to have_content("Avatar image must be a JPG, JPEG or PNG")
     end
   end
 end

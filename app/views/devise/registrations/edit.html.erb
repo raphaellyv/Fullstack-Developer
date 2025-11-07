@@ -21,7 +21,7 @@
 
       <div class="field">
         <%= f.label :avatar_image, class: "form-lable" %> <i><%= t("devise.edit.avatar_image.info") %></i>
-        <%= f.file_field :avatar_image, class: "form-control" %>
+        <%= f.file_field :avatar_image, accept:"image/png, image/jpg, image/jpeg", class: "form-control" %>
       </div>
 
       <div class="field">

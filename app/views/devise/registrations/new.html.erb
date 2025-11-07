@@ -30,7 +30,7 @@
 
       <div class="field">
         <%= f.label :avatar_image, class: "form-lable" %>
-        <%= f.file_field :avatar_image, class: "form-control", required: true %>
+        <%= f.file_field :avatar_image, accept:"image/png, image/jpg, image/jpeg", class: "form-control", required: true %>
       </div>
 
       <div class="actions">

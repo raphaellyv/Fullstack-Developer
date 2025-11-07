@@ -5,11 +5,9 @@
     <%= render "devise/shared/error_messages", resource: @user %>
 
     <div class="d-grid gap-3 mb-3">
-      <% if @user.avatar_image.variant(:medium) %>
-        <div class="text-center">
-          <%= image_tag @user.avatar_image.variant(:medium), class: "img-thumbnail rounded-circle", alt: "avatar", style: "max-height: 150px;" %>
-        </div>
-      <% end %>
+      <div class="text-center">
+        <%= image_tag @user.avatar_image.variant(:medium) || "/default-avatar-medium.png", class: "img-thumbnail rounded-circle", alt: "avatar", style: "max-height: 150px;" %>
+      </div>
 
       <div>
         <%= f.label :full_name, class: "form-lable" %>
@@ -23,7 +21,7 @@
 
       <div>
         <%= f.label :avatar_image, class: "form-lable" %>
-        <%= f.file_field :avatar_image, class: "form-control" %>
+        <%= f.file_field :avatar_image, accept:"image/png, image/jpg, image/jpeg", class: "form-control" %>
       </div>
 
       <div>

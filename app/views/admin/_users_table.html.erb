@@ -11,9 +11,7 @@
     <% @records.each do |user| %>
       <tr>
         <td class="text-end">
-          <% if user.avatar_image.variant(:thumb) %>
-            <%= image_tag user.avatar_image.variant(:thumb), class: "img-thumbnail rounded-circle", alt: "avatar" %>
-          <% end %>
+          <%= image_tag user.avatar_image.variant(:thumb) || "/default-avatar-thumb.png", class: "img-thumbnail rounded-circle", alt: "avatar" %>
         <td>
           <p class="fs-6"><%= user.full_name %></p>
           <p class="text-body-secondary fs-6"><%= user.email %></p>
