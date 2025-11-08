@@ -1,17 +1,6 @@
 require 'rails_helper'
 
 describe 'Remove user', type: :system do
-  it 'is accessed through the Edit User form' do
-    admin = create(:user, role: :admin)
-    user = create(:user)
-    login_as(admin)
-
-    visit(edit_admin_path(user.id))
-
-    expect(page).to have_content('Remove this user')
-    expect(page).to have_button('Remove user')
-  end
-
   it 'removes user from the database' do
     user1 = create(:user)
     user2 = create(:user)

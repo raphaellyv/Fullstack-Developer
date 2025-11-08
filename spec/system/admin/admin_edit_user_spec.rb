@@ -6,6 +6,7 @@ describe 'Admin edit user', type: :system do
     login_as(admin)
 
     visit(admin_dashboard_path)
+    click_on('Options')
     click_on('Edit')
 
     expect(page).to have_content('Edit User')
