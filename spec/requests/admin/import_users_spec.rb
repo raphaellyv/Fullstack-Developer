@@ -56,6 +56,8 @@ describe 'POST /admin/import_users', type: :request do
       expect(User.order(:full_name).pluck(:full_name)).to eq(
         [ 'Abel Duarte', 'Alice Souza', 'Carla Andrade', 'Helena Silva', 'Marcos Souza', 'Monique Leite' ]
       )
+
+      expect(User.last.avatar_image.attached?).to eq(true)
       expect(response).to redirect_to(admin_dashboard_url)
     end
   end

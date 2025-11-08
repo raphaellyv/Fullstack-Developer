@@ -17,12 +17,22 @@ class CsvImportService
       users_to_import << user if user["avatar_image_url"]
     end
 
-    User.import users_to_import, on_duplicate_key_ignore: true
+    User.import(users_to_import, on_duplicate_key_ignore: true)
 
     total_users_after_import = User.count
     @count = total_users_after_import - total_users_before_import
 
-    users_to_import.each do |imported_user|
+    attach_avatar_image_to_users(users_to_import)
+  end
+
+  def number_imported_with_last_run
+    @count
+  end
+
+  private
+
+  def attach_avatar_image_to_users(users)
+    users.each do |imported_user|
       created_user = User.find_by(email: imported_user["email"])
 
       if created_user
@@ -34,9 +44,5 @@ class CsvImportService
         )
       end
     end
-  end
-
-  def number_imported_with_last_run
-    @count
   end
 end
