@@ -17,7 +17,7 @@ Users Management App is a Ruby on Rails responsive application to manage users. 
 
 ![Admin dashboard](image-2.png)
 
-![Admin dashboard mobile](image-3.png)
+![Admin dashboard mobile](image-4.png)
 
 ## Technologies
 
