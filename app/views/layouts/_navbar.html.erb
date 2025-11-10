@@ -11,9 +11,11 @@
         <div class="navbar-nav me-auto mb-2 mb-lg-0"></div>
         <ul class="navbar-nav me-2 mb-lg-0">
           <li class="nav-item">
-            <%= link_to t("devise.sign_in.link"), new_user_session_path, class: "nav-link active" %>
+            <%= link_to t("devise.sign_in.link"), new_user_session_path, class: "nav-link #{ 'active' if current_page?(new_user_session_path) }" %>
           </li>
-          <%= link_to t("devise.sign_up.link"), new_user_registration_path, class: "btn btn-primary me-2" %>
+          <li class="nav-item">
+            <%= link_to t("devise.sign_up.link"), new_user_registration_path, class: "btn btn-primary me-2" %>
+          </li>
         </ul>
       <% end %>
     </div>
