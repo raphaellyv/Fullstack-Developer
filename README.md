@@ -2,17 +2,17 @@
 
 Users Management App is a Ruby on Rails responsive application to manage users. This system allows:
 
-- An admin to access a User Admin Dashboard.
-- An Admin to see on Dashboard:
+- An Admin to access a User Admin Dashboard.
+- An Admin to see on the Dashboard:
   - Total number of Users
   - Total number of Users grouped by Role
-- As an Admin, I must be redirected to User Admin Dashboard after login
+- An Admin to be redirected to the User Admin Dashboard after login.
 - An Admin to list, create, edit and delete Users.
 - An Admin to toggle the User Role.
-- An Admin to import a Spreadsheet into the system, in order to create new Users
+- An Admin to import a Spreadsheet into the system, in order to create new Users.
 - An Admin to see the progress of Users imports.
-- An User to be redirected to their Profile after login
-- An User to be able only to see their info, edit and delete their profile.
+- A User to be redirected to their Profile after login.
+- A User to be able only to see their info, edit and delete their profile.
 - Visitors to register themselves as normal Users.
 
 ![Admin dashboard](image-2.png)
@@ -89,7 +89,7 @@ bin/rubocop
 
 ## Users CSV File
 
-An example of csv file for the importation of users is available on 'spec/fixtures/files/sample_users_file.csv'.
+An example of csv file for the importation of users is available on `spec/fixtures/files/sample_users_file.csv`.
 
 ## Login
 
