@@ -98,7 +98,7 @@ describe 'Admin remove user', type: :system do
         expect(User.count).to eq(1)
         expect(User.first).to eq(admin)
         expect(page).to have_content('In order to remove this user, please create another administrator.')
-        expect(page).to have_content('Edit User')
+        expect(page).to have_button('Upload Users')
       end
     end
   end

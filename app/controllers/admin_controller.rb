@@ -47,9 +47,7 @@ class AdminController < ApplicationController
     set_user
 
     if @user.admin? && User.admin.count == 1
-      flash.now[:alert] = t("messages.destroy_user_last_admin")
-      @roles_options = User.roles.keys
-      render "edit"
+      redirect_to admin_dashboard_url, alert: t("messages.destroy_user_last_admin"), status: :see_other
     else
       @user.destroy!
       redirect_to admin_dashboard_url, notice: t("messages.destroy_user_success"), status: :see_other
